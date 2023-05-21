@@ -1,0 +1,69 @@
+.container{
+display: flex;
+flex-direction: column;
+}
+div{
+    margin: 1rem;
+}
+
+
+.red{
+    background: linear-gradient(red,rgb(206, 99, 99));
+position: relative;
+display: inline-block;
+    height: 2rem;
+    width: 3rem;
+    justify-content: center;
+    left: 50%;
+}
+.green{
+    background: linear-gradient(blue,rgb(108, 108, 211));;
+position: relative;
+display: inline-block;
+height: 2rem;
+width: 3rem;
+    justify-content: center;
+    left: 50%;
+}
+.blue{
+    background: linear-gradient(green,rgb(108, 211, 147));
+position: relative;
+display: inline-block;
+height: 2rem;
+width: 3rem;
+    justify-content: center;
+    left: 50%;
+}
+
+.borderLeft{
+    border: 4px solid black;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.red1{
+   position: relative;
+   left: 49.7%;
+   width:1rem
+   
+}
+
+.red2{
+    position: relative;
+    left: 49.4%;
+    
+}
+
+.red3{
+    position: relative;
+    left:49.1%;
+}
+
+.red21{
+    background: rgb(172, 83, 83);
+}
+
+.red23{
+    background: rgb(255, 5, 5);
+}
