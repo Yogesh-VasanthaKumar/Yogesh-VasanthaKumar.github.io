@@ -1,0 +1,91 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+div{
+   text-transform: capitalize;
+   text-decoration: solid;
+   margin: 1rem;
+    text-align: center;
+    top: 50%;
+}
+.color1{
+    
+    height:150px;
+    width: 30%;
+    background-color:aliceblue;
+}
+.color4{
+    height: 150px;
+    width: 30%;
+    background-color:antiquewhite ;
+}
+.color3{
+    height: 150px;
+    width: 30%;
+    background-color:aqua ;
+}
+.color2{
+    height: 150px;
+    width: 30%;
+    background-color:aquamarine ;
+}
+.color5{
+    height: 150px;
+    width: 30%;
+    background-color:azure ;
+}
+.color6{
+    height: 150px;
+    width: 30%;
+    background-color:beige ;
+}
+.color7{
+    height: 150px;
+    width:30%;
+    background-color:bisque ;
+}
+.color8{
+    height: 150px;
+    width: 30%;
+    background-color:black ;
+}
+.color9{
+    height: 150px;
+    width: 30%;
+    background-color:blanchedalmond ;
+}
+.color10{
+    height: 150px;
+    width: 30%;
+    background-color: blue;
+}
+.color11{
+    height: 150px;
+    width: 30%;
+    background-color: blueviolet;
+}
+.color12{
+    height: 150px;
+    width: 30%;
+    background-color: brown;
+}
+.color13{
+    height: 150px;
+    width: 30%;
+    background-color: burlywood;
+}
+.color14{
+    height: 150px;
+    width: 30%;
+    background-color: cadetBlue;
+
+}
+.color15{
+    height: 150px;
+    width: 30%;
+    background-color: chartreuse;
+}
