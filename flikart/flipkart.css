@@ -1,0 +1,47 @@
+div{
+/*     border:2px solid black; */
+    margin: 2px;
+    padding: 2px;
+}
+
+.flip{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.logo{
+    background-image: url("https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png");
+    height: 50px;
+    width: 10vw;
+    background-size: 10vw;
+    background-repeat: no-repeat;
+
+}
+
+.nav{
+    display: flex;
+    width: 100vw;
+    height: 30vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+}
+.search{
+    width: 22vw;
+    height: 10vh;
+    background-color: white;
+}
+
+input{
+    border: none;
+    height: 10vh;
+    width: 22vw;
+}
+.main{
+    display: flex;
+    width: 100vw;
+    height: 50vh;justify-content: space-around;
+}
