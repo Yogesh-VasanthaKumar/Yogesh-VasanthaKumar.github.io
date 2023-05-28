@@ -1,5 +1,5 @@
 div{
-/*     border:2px solid black; */
+    /* border:2px solid black; */
     margin: 2px;
     padding: 2px;
 }
@@ -24,24 +24,42 @@ div{
 .nav{
     display: flex;
     width: 100vw;
-    height: 30vh;
+    height: 15vh;
     justify-content: space-around;
     align-items: center;
     background-color: blue;
 }
 .search{
     width: 22vw;
-    height: 10vh;
+    height: 5vh;
     background-color: white;
+    border-radius: 3%;
 }
 
 input{
-    border: none;
-    height: 10vh;
     width: 22vw;
+    height: 5vh;
+    background-color: white;
+    border:none;
 }
 .main{
     display: flex;
     width: 100vw;
     height: 50vh;justify-content: space-around;
+}
+
+.login{
+    background-color: white;
+    border-radius: 5%;
+    width: 5vw;
+    text-align: center;
+}
+
+.text{
+    color: white;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
 }
