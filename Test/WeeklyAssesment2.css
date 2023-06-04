@@ -1,0 +1,164 @@
+ div{
+    /* border: 1px solid brown; */
+    margin: 5px;
+    background-color: antiquewhite;
+    
+} 
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+.nav{
+    height: 10vh;
+    display: flex;
+    margin: 1vh;
+    align-items: center;
+    
+}
+.menu{
+    display: flex;
+    width: 25vh;
+    margin: 2%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.icon{
+    display: flex;
+    width: 25vh;
+    margin: 2%;
+    align-items: center;
+    justify-content: center;
+}
+.search{
+    display: flex;
+    width: 50vh;
+    margin: 2%;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input{
+  outline: none;
+  border: 1px solid rgb(141, 136, 136);
+  justify-content: center;
+}
+.search input[type=text]:focus {
+    border: 3px solid #555;
+  }
+.icon img{
+    width: 100px;
+    height: 20px;
+    
+}
+
+.ads{
+    display: flex;
+    width: 150px;
+    height: 5vh;
+    margin: 2%;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid brown;
+
+}
+
+.plus{
+    display: flex;
+    width: 150px;
+    height: 5vh;
+    margin: 2%;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid brown;
+}
+.lang{
+    height: 50px;
+    width: 50px;
+}
+.night{
+    height: 50px;
+    width: 50px;
+}
+.login{
+    height: 50px;
+    width: 50px;
+}
+
+.search{
+    width: 25vh;
+}
+.main{
+    display: flex;
+    
+    align-items: center;
+} 
+.image img{
+    border-radius: 50%;
+    height: 30vh;
+    width: 30vh;
+    margin: 2%;
+}
+
+.cont{
+    display: flex;
+    justify-items: space-around;
+    flex-direction: column;
+}
+
+.play{
+    display: flex;
+}
+
+.play div{
+    border: 1px solid red;
+}
+
+.play .sq{
+    width: 150px;
+    height: 5vh;
+    border-radius: 30px 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+}
+
+.play p{
+    align-items: center;
+    color: white;
+    
+}
+
+.play .cir{
+    border-radius: 100%;
+    width: 50px;
+    height: 5vh;
+}
+
+.co{
+    display: flex;
+}
+
+.a{
+    width: 80px;
+    height: 5vh;
+    border-radius: 30px 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    
+}
+
+.c{
+    background-color: red;
+    color: white;
+}
+
