@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complete Responsive Website Using HTML5 & CSS3 </title>
+  <style>
+  *{ padding: 0; margin:0; font-family: sans-serif; box-sizing: border-box; }
+header{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 70px;
+}
+.logo{
+	font-size: 30px;
+	font-weight: bold;
+	color:#7f8fa6;
+	letter-spacing: 5px;
+}
+.menu a{
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+	padding: 10px 20px;
+}
+.circle{
+	width: 400px;
+	height: 400px;
+	background: rgba(0,0,0,0.05);
+	border-radius: 50%;
+	position: absolute;
+	top:20%;
+	right: 10%;
+	z-index: -1;
+
+}
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+}
+.left{
+	flex-basis: 60%;
+	max-width: 450px;
+}
+.right{
+	flex-basis: 40%;
+	text-align: right;
+}
+.right img{
+	width: 70%;
+}
+
+.left h1{
+	font-size: 50px;
+}
+.left span{
+	color:#7f8fa6; 
+}
+.p-header{
+	margin-top: 10px;
+}
+.btn{
+	margin-top: 30px;
+}
+.btn input{
+	padding: 10px;
+	width: 75%;
+	border-radius: 10px;
+	border: 1px solid grey;
+	outline: none;
+}
+.btn button{
+	padding: 10px;
+	color: white;
+	background:#7f8fa6; 
+	border: none;
+	outline: none;
+	border-radius: 10px; 
+}
+.counter{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+#welcome{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 180px;
+	z-index: -1;
+}
+#featured{
+	padding: 100px 50px;
+}
+.featured-row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.featured-left-col{
+	flex-basis: 50%;
+}
+.featured-left-col img{
+	width: 80%;
+}
+.featured-right-col{
+	flex-basis: 50%;
+	max-width: 500px;
+}
+.featured-right-col h1{
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+.featured-right-col p{
+	margin:20px 0px;
+	color: grey;
+}
+
+.c-btn{
+	background: none;
+	padding: 10px;
+	border:1px solid black;
+	outline: none;
+	color: black;
+}
+#featured2{
+	padding: 100px 50px;
+}
+.featured2-row,.offer-row{
+display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+}
+
+.featured2-left-col,.offer-left-col{
+	flex-basis: 50%;
+	max-width: 500px;
+}
+.offer-left-col{
+	max-width: 400px;
+}
+.featured2-right-col,.offer-right-col{
+	flex-basis: 50%;
+}
+.featured2-right-col,.offer-right-col img{
+	width: 100%;
+}
+
+.featured2-left-col,.offer-left-col h1{
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+.featured2-left-col p{
+	margin:20px 0px;
+	color: grey;
+	font-size: 20px;
+
+}
+.offer-left-col p{
+	margin:20px 0px;
+	color: grey;
+
+}
+#selling{
+	padding: 50px;
+}
+#selling h1{
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.selling-row{
+display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+
+}
+.selling-box{
+	flex-basis:30%;
+	text-align: center;
+}
+.selling-box img{
+	width: 100%;
+}
+
+.selling-box > div{
+	background: rgba(0,0,0,0.05);
+}
+.selling-box h3{
+	margin:10px 0px;
+}
+
+#offer{
+	padding: 100px 50px;
+}
+
+#blog{
+	padding: 100px 50px;
+}
+#blog h1{
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.blog-row{
+display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;	
+}
+.blog-box{
+	flex-basis: 25%;
+	padding: 10px;
+	box-shadow: 2px 3px 5px grey;
+}
+.blog-box img{
+	width: 100%;
+}
+
+.blog-box p{
+	margin:20px 0px;
+}
+#footer{
+	padding: 30px 50px;
+}
+.subscribe{
+	text-align: center;
+	margin-bottom: 30px;
+}
+.subscribe input{
+	width: 50%;
+	padding: 10px;
+	border: none;
+	background: rgba(0,0,0,0.05);
+	outline: none;
+}
+.subscribe button{
+	padding: 10px;
+	border:none;
+	outline: none;
+	color: white;
+	background:#7f8fa6;  
+}
+
+.footer-row{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.footer-row p{
+	color: grey;
+	margin:10px 0px;
+}
+
+@media (max-width: 770px){
+
+.menu{
+	display: none;
+}
+.left{
+	flex-basis: 100%;
+	margin:50px 100px;
+}
+.right{
+	display: none;
+}
+
+#welcome{
+	width: 120px;
+}
+.btn input{
+	width: 50%;
+}
+
+.featured-left-col{
+	flex-basis: 100%;
+}
+.featured-right-col{
+	flex-basis: 100%;
+}
+
+
+
+.featured2-left-col{
+	flex-basis: 100%;
+}
+.featured2-right-col{
+	flex-basis: 100%;
+}
+.featured2-right-col img{
+	width: 100%;
+}
+.selling-box{
+	flex-basis:100%;
+	text-align: center;
+	margin:10px 0px;
+}
+.offer-left-col{
+	flex-basis: 100%;
+	margin-bottom: 10px;
+
+}
+.offer-right-col{
+	flex-basis: 100%;
+
+}
+.offer-right-col img{
+	width:100%;
+
+}
+
+.blog-box{
+	flex-basis: 100%;
+	margin:10px 0px;
+}
+.footer-row> div{
+	flex-basis: 30%;
+}
+}
+
+  </style>
+</head>
+<body>
+<header>
+	<nav>
+		<div class="logo">
+			Furniture
+		</div>
+		<div class="menu">
+			<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Products</a>
+				<a href="#">Contact</a>
+		</div>
+		<div class="icon">
+			<img src="images/icon.png">
+		</div>
+	</nav>
+
+<div class="circle"></div>
+
+<div class="container">
+	<div class="left">
+		<h1>We Create <br> Awesome<span> Things</span>	</h1>
+  		<p class="p-header">
+  			Find your good way the living the furniture.	
+  		</p>
+		<div class="btn">
+			<input type="text" name="" placeholder="Search here">
+			<button>Order now</button>
+		</div>
+		<div class="counter">
+			<div>
+					<h2>50k</h2>
+  				<p>Total Products</p>
+			</div>
+				<div>
+					<h2>150k</h2>
+  				<p>Customers</p>
+			</div>
+				<div>
+					<h2>450k</h2>
+  				<p>Relations</p>
+			</div>
+			<img src="images/welcome.png" id="welcome">
+		</div>	
+
+
+
+	</div>
+
+
+	<div class="right">
+		<img src="images/img1.png">
+	</div>
+</div>
+</header>
+
+<section id="featured">
+	<div class="featured-row">
+		<div class="featured-left-col">
+			<img src="images/img2.png">
+		</div>
+
+		<div class="featured-right-col">
+			<p>FEATURED PRODUCT</p>
+  			<h1>Wooden Chair</h1>
+  			<p>
+  					Find your good way the living the furniture.Find your good way the living the furniture.	Find your good way the living the furniture.Find your good way the living the furniture.		
+  			</p>
+  			<button class="c-btn"> Only 90$</button>
+		</div>
+	</div>
+</section>
+
+
+<section id="featured2">
+	<div class="featured2-row">
+		<div class="featured2-left-col">
+			<p>FEATURED PRODUCT</p>
+  			<h1>Table Wood Pine</h1>
+  			<p>
+  					Find your good way the living the furniture.Find your good way the living the furniture.	Find your good way the living the furniture.Find your good way the living the furniture.		
+  			</p>
+  			<button class="c-btn"> Only 90$</button>
+		</div>
+		<div class="featured2-right-col">
+			<img src="images/img3.png">
+		</div>
+	</div>
+</section>
+
+<section id="featured">
+	<div class="featured-row">
+		<div class="featured-left-col">
+			<img src="images/img4.png">
+		</div>
+
+		<div class="featured-right-col">
+			<p>FEATURED PRODUCT</p>
+  			<h1>Art Deco Home</h1>
+  			<p>
+  					Find your good way the living the furniture.Find your good way the living the furniture.	Find your good way the living the furniture.Find your good way the living the furniture.		
+  			</p>
+  			<button class="c-btn"> Only 90$</button>
+		</div>
+	</div>
+</section>
+
+
+<section id="selling">
+	<h1>Best Selling</h1>
+	<div class="selling-row">
+		<div class="selling-box">
+			<div>
+				<img src="images/img5.png">
+
+			</div>
+			<h3>Sample Sofa</h3>
+			<p>$120-150$</p>
+		</div>
+		<div class="selling-box">
+			<div>
+				<img src="images/img6.png">
+
+			</div>
+			<h3>Sample Sofa</h3>
+			<p>$120-150$</p>
+		</div>
+		<div class="selling-box">
+			<div>
+				<img src="images/img5.png">
+
+			</div>
+			<h3>Sample Sofa</h3>
+			<p>$120-150$</p>
+		</div>
+		<div class="selling-box">
+			<div>
+				<img src="images/img5.png">
+
+			</div>
+			<h3>Sample Sofa</h3>
+			<p>$120-150$</p>
+		</div>
+		<div class="selling-box">
+			<div>
+				<img src="images/img6.png">
+
+			</div>
+			<h3>Sample Sofa</h3>
+			<p>$120-150$</p>
+		</div>
+		<div class="selling-box">
+			<div>
+				<img src="images/img5.png">
+
+			</div>
+			<h3>Sample Sofa</h3>
+			<p>$120-150$</p>
+		</div>
+	</div>
+</section>
+
+<section id="offer">
+	<div class="offer-row">
+		<div class="offer-left-col">
+			<h1>Best <br>Festival<span style="color:#7f8fa6; "> Offer's</span></h1>
+		<p>
+			We are providing best offers on every festivals. we are always ready to help 
+			you in buying something good products.
+			We are providing best offers on every festivals. we are always ready to help 
+			you in buying something good products.
+		</p>
+		<button class="c-btn">Book now!!</button>
+		</div>
+		<div class="offer-right-col">
+			<img src="images/img7.png">
+		</div>
+	</div>
+</section>
+
+<section id="blog">
+	<h1>Our Blog</h1>
+	<div class="blog-row">
+		<div class="blog-box">
+			<img src="images/img8.jpg">
+
+		<h3>Interior Design <br>is the Art, the interior designer</h3>
+		<p>November 15, 2020 / Furniture</p>
+		<button class="c-btn">Read more</button>
+		</div>
+			<div class="blog-box">
+			<img src="images/img9.jpg">
+			
+		<h3>Interior Design <br>is the Art, the interior designer</h3>
+		<p>November 15, 2020 / Furniture</p>
+		<button class="c-btn">Read more</button>
+		</div>
+			<div class="blog-box">
+			<img src="images/img8.jpg">
+			
+		<h3>Interior Design <br>is the Art, the interior designer</h3>
+		<p>November 15, 2020 / Furniture</p>
+		<button class="c-btn">Read more</button>
+		</div>
+	</div>
+</section>
+
+<section id="footer">
+	<div class="subscribe">
+		<input type="text" name="" placeholder="Enter e-mail">
+		<button>Subscribe</button>
+	</div>
+
+<div class="footer-row">
+	<div>
+			<h2>Address</h2>
+			<p>Ward no.5</p>
+			<p>Laxmangarh, Sikar 332311</p>
+			<p>Rajasthan, India</p>
+			<img src="images/icon.png">
+		
+	</div>
+	<div>
+			<h2>Important Links</h2>
+			<p>Home</p>
+			<p>Product</p>
+			<p>Contact</p>
+			<p>About us</p>
+		
+	</div>
+	<div>
+			<h2>Support</h2>
+			<p>Help</p>
+			<p>Online Stores</p>
+			<p>Terms & Conditions</p>
+		
+	</div>
+</div>
+
+
+</section>
+
+
+</body>
+</html>
