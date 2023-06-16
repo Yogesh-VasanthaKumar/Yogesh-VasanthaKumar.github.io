@@ -1,7 +1,10 @@
 body{
     margin: 0;
 }
-
+.header{
+background-color: black;
+    width:100vw;
+}
 .bgblack{
     background-color: black;
     color: white;
