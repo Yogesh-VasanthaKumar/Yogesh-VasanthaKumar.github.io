@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1c548c6eb2.js" crossorigin="anonymous"></script>
+  
+  <script>
+    body{
+    margin: 0;
+}
+
+.bgblack{
+    background-color: black;
+    color: white;
+}
+
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.head1{
+    display: flex;
+    height: 20%;
+    width: 100%;
+    margin-bottom: 1px;
+    justify-content: space-evenly;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo img{
+ height: 80px;
+}
+
+.textcont{
+    display: flex;
+    align-items: flex-end;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+
+.text2{
+    font-size: small;
+    margin-right: 10px;
+}
+.search{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+
+}
+.search input[type="text"] ,select{
+    
+    border:none;
+    background-color: dimgrey;
+    color: white;
+    padding: 5px;
+    width: 200px;
+    height: 30px;
+    padding-right: 50px;
+   outline: none;
+  transition: width 0.3s ease ;
+  
+}
+.search input[type="text"]:focus{
+    width: 500px;
+    border-bottom: 2px solid blue;
+    
+}
+.search input[type="text"]::placeholder {
+    color: white;
+    opacity: 1; 
+  }
+.searchicon{
+    position: absolute;
+    right: 15px;
+    top:20px;
+    transform: translateY(-50%);
+}
+.fa-star{
+    position: absolute;
+   right:-30px;
+    top:10px;
+   
+}
+
+.fa-address-book{
+    position: absolute;
+    right:-60px;
+     top:10px;
+}
+
+.head2{
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    margin-bottom: 1px;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.head2 a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+
+.fa-car{
+ margin-left: 20vw;
+}
+
+.head3{
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    margin-bottom: 1px;
+    justify-content: center;
+}
+
+.head3 a{
+    text-decoration: underline;
+}
+
+
+
+.up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about{
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-evenly;
+}
+
+.ico{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ico i{
+    margin: .5rem;
+}
+
+.container{
+    margin: 2rem;
+    display: flex;
+    justify-content:space-between;
+}
+.container1{
+    
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.container1 .footer-column{
+margin-left: -56rem;
+}
+.footer-column li{
+line-height: 2rem;
+}
+
+.message{
+    height: 80px;
+    width: 80px;
+    background-color:dimgrey;
+    position: fixed;
+    right:10px;
+    bottom: 12px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back{
+    width: 100%;
+    height: 60rem;
+    background-image: url("https://www.mercedes-benz.co.in/content/india/en/passengercars/_jcr_content/root/responsivegrid/simple_stage_1564354_1682158709.component.damq6.3372346753054.jpg/mercedes-benz-g-class-w463-stage-3840x1707-08-2022-01.jpg");
+background-repeat: no-repeat;
+background-size: contain;
+position: relative;
+
+}
+
+.backtext{
+    
+    position: absolute;
+    /* bottom: 50%;
+    left: 10%; */
+    content:'\A';
+    width:100%; height:100%;
+    bottom:12%; left:0;
+    background:rgba(0,0,0,0.3);
+    
+}
+
+.backtext div{
+    position: absolute;
+    bottom: 40%;
+    left: 10%;
+}
+
+.backtext h1{
+    font-size: 3rem;
+    color:white;
+    
+}
+
+.backtext p{
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.backtext button{
+    /* outline: none; */
+    background-color: blue;
+    color: white;
+    height: 5rem;
+    width: 15rem;
+    font-size: large;
+    border-radius: 15px;
+    border: 1px solid blue;
+}
+.message img{
+    height: 50px;
+}
+
+.text4{
+    font-size: 3rem;
+    font-weight: normal;
+    
+}
+
+main{
+    margin: 4rem;
+}
+.fix{
+    background-color: white;
+    height: 150rem;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.fix .abs{
+    position: -webkit-sticky;
+  position: sticky;
+    
+    top: 0;
+}
+
+.item1 img{
+    height: 300px;
+    width: 400px;
+}
+
+.item1 h4{
+font-size: 1.5rem;
+}
+.item1 p{
+   margin-top: -1rem;
+    font-size: 1rem;
+}
+
+.item1 button{
+    background-color: blue;
+    width: 300px;
+    color: white;
+    padding: .5rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+.recomendation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fix h3{
+    font-size: 3rem;
+    font-weight: normal;
+    margin-top: 9rem;
+    display: none;
+}
+
+
+.abs .a1{
+    margin-top:2rem ;
+    border: 1px solid black;
+    height: 3rem;
+    width: 8rem;
+}
+
+.abs .a1 p{
+ text-align: center;
+}
+.abs{
+
+    display: flex;
+}
+
+.abs1{
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+    top: 8rem;
+}
+
+.abs1 .a1{
+    margin-top: 8rem;
+}
+
+.b3{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.b3 i{
+    margin-right: 1rem;
+}
+
+.rel{
+    
+    /* border: 1px solid black; */
+    left: 12rem;
+    width: 80%;
+    bottom: -10rem;
+ top: -30rem;
+    height: 90%;
+    position: relative;
+    z-index: 5;
+    
+}
+
+.red{
+   display: grid;
+    /* background-color: red; */
+    position: sticky;
+  height: 90%;
+    overflow: auto;
+    grid-template-columns: auto auto auto;
+   
+   
+    
+}
+.wrapper {
+    width:100%;
+    position:fixed;
+    z-index:10;
+    background:inherit;
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
+
+
+
+
+.cont{
+    display: flex;
+    justify-content: center;;
+  }
+  
+  .box1 {
+    width: 25%; /* Adjust the width as needed */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 3rem;
+  }
+  
+ 
+
+  </script>
+</head>
+<body>
+    <header>
+        <div class="bgblack head1" id="head1">
+            <div class="logo">
+                <img src="https://1000logos.net/wp-content/uploads/2018/04/Mercedes-Benz-Logo.png">
+                <div class="textcont">
+                    <h4 class="text1"> Mercedes-Benz</h4>
+                </div>
+            </div>
+            <div class="right">
+                <div class="text2">
+                        <p>&copy; 2023. Mercedes-Benz India Pvt. Ltd. All Rights Reserved (provider)</p>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Your search term/ Online Code">
+                    <i class="fa-solid fa-magnifying-glass searchicon" style="color: #ffffff;"></i>
+                    <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                    <i class="fa-regular fa-address-book" style="color: #ffffff;"></i>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div  class="bgblack head2">
+            <i class="fa-solid fa-car" style="color: #ffffff;"></i>
+                <a href="#">Our Models</a>
+                <a href="#">Buy Online</a>
+                <a href="#">Finance</a>
+                <a href="#">Services</a>
+                <a href="#">Our Brand</a>
+              
+        
+        </div>
+
+        <div  class="bgblack head3">
+<h3>Explore your dream Mercedes-Benz. <a>Shop online now.</a></h3>
+        </div>
+    </header>
+
+
+<div class="back">
+    <div class="backtext">
+        <div>
+            <h1>Stronger Than Time</h1>
+            <p>G-Class</p>
+        
+            <button>Learn more</button>
+        </div>
+        
+    </div>
+</div>
+<main>
+<div class="main2">
+<h1 class="text4">Our recomendations.</h1>
+
+
+<div class="recomendation">
+    <div class="item1">
+         <img src="https://www.mercedes-benz.co.in/content/india/en/passengercars/_jcr_content/root/responsivegrid/simple_teaser_115569/simple_teaser_item_469564746.component.damq6.3369809991451.png/simple_teaser_a_45.png">
+         <h4> Mecedes-AMG A 45 S 4MATIC+</h4>
+         <p>Thrill for every day.</p>
+         <button>Learn more</button>
+    </div>
+    <div class="item1">
+        <img src="https://www.mercedes-benz.co.in/content/india/en/passengercars/_jcr_content/root/responsivegrid/simple_teaser_115569/simple_teaser_item_536358667.component.damq6.3352550160800.jpg/MB_Online_Showroom_Image_Mobile.jpg">
+        <h4> Buy your new Mercedes-Benz Online</h4>
+        <p>Browse the Mercedes-Benz Online Showroom today</p>
+        <button>Learn more</button>
+   </div>
+   <div class="item1">
+    <img src="https://www.mercedes-benz.co.in/content/india/en/passengercars/_jcr_content/root/responsivegrid/simple_teaser_115569/simple_teaser_item_2_254926509.component.damq2.3314299272889.jpg/Pre-Owned%20cars%20Mobile%20Banner.jpg">
+    <h4> Pre-Owned cars</h4>
+    <p>Find your dream car with Mercedes-Benz pre-owned cars</p>
+    <button>Learn more</button>
+</div> <div class="item1">
+    <img src="https://www.mercedes-benz.co.in/content/india/en/passengercars/_jcr_content/root/responsivegrid/simple_teaser_115569/simple_teaser_item_1.component.damq6.3339594823784.jpg/GLB_MBC_our.jpg">
+    <h4>The new GLB</h4>
+    <p>All Kinds of strength</p>
+    <button>Learn more</button>
+</div>
+</div>
+</div>
+ 
+ <div class="message">
+    <im g src="https://cdn-icons-png.flaticon.com/512/685/685887.png">
+</div>
+ 
+ 
+ <div class="fix">
+    <h3>All Models</h3>
+ <div class="abs">
+  <div class="a1"><p>All models</p></div>
+  <div class="a1"><p>AMG</p></div>
+  <div class="a1"><p>MAYBACH</p></div>
+  <div class="a1"><p>New Models</p></div>
+ </div>
+
+ <div class="abs1">
+    <div class="a1"><h4>Fuel Type</h4> 
+        <div class="a2">
+    <input type="checkbox"> Electric <br>
+    <input type="checkbox"> Plug-in Hybrid
+ </div>
+ <h4 >BodyType</h4>
+ <div class="b4">
+ <div class="b3">
+ <i class="fa-solid fa-car-side" style="color: #000000;"></i> 
+ <p>Limousine</p>
+ </div>
+  <div class="b3">
+ <i class="fa-solid fa-car-side" style="color: #000000;"></i> 
+ <p>SUV Range</p>
+ </div>
+ <div class="b3">
+ <i class="fa-solid fa-car-side" style="color: #000000;"></i> 
+ <p>Hatchback</p>
+ </div>
+ <div class="b3">
+ <i class="fa-solid fa-car-side" style="color: #000000;"></i> 
+ <p>Coupes</p>
+ </div>
+ <div class="b3">
+ <i class="fa-solid fa-car-side" style="color: #000000;"></i> 
+ <p>Cabrolets / Roadsters</p>
+ </div>
+ </div>
+    </div>
+
+ </div>
+ <div class="wrapper">
+
+ </div>
+ <div class="rel">
+ <div class="red"> 
+  <div class="item2">
+    <h1>EQS Saloon</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXq0W7qtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlKStsd2HtcUfp8qXGEuiBJ0l3IrOB2NzObApRA9I5ux4uQC31SrkzNwL6m7jA6ohKV5SQ%25vqCv%25yLRzAHYax75prH1KM1n8wvT3oiZUbXM4FGKuTg90hE6PDBSbSeWAtRtsd5%25QcUfCmfXGEvTVJ0lLOqOB2azEbApHYXI5usoIQC3UC1kzNGJum7j0hShKVBHM%25vq8cXyr%25kWfDpJJ0lCrnOIJRdAbQO%25nyI5ue5JQC3PgwkzN5z9m7jCeohKVzXh%25vq7XFyLRl36YaxHahrH18Bln8520R%256d9lo24MA4F0wOoZ1qggDu63FmZ3MkNulKlO1OsxACeqUx4Wg3yZ3&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+
+  <div class="item2">
+    <h1>A-class Saloon</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.png?COSY-EU-100-1713d0VXqaW7qtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGaFtsd0YtcUfpUWXGEuiRJ0l3okOB2NS1bApRTyI5uGoxQC30CQkzNBtum7j86ZhKViKw%25vq4yTyLRhcVYax%255SrH1GCfn8w0XyoiZKboM4FvyjTg9L6k6PDaGqSeW0h%25tXSMNV31yyLRiXJYnydjHroY4Jdn8w5zhoiZH6IM4F8mQTg9Pgn6PDe7oSeWsyhtsLV79MOuljcVL2vGmFdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp0xTfx&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>C-class Saloon</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXq0W7qtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlKStsd2HtcUfp8qXGEuiBJ0l3IrOB2NzObApRA9I5ux4uQC31SrkzNwL6m7jA6ohKV5SQ%25vqCv%25yLRzAHYax75prH1KM1n8wvT3oiZUbXM4FGKuTg90hE6PDBSbSeWAtRtsd5%25QcUfCmfXGEvTVJ0lLOqOB2azEbApHYXI5usoIQC3UC1kzNGJum7j0hShKVBHM%25vq8cXyr%25kWfDpJJ0lCrnOIJRdAbQO%25nyI5ue5JQC3PgwkzN5z9m7jCeohKVzXh%25vq7XFyLRl36YaxHahrH18Bln8520R%256d9lo24MA4F0wOoZ1qggDu63FmZ3MkNulKlO1OsxACeqUx4Wg3yZ3&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+
+  <div class="item2">
+    <h1>E-class LWB</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXq0W7qtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlKStsd2HtcUfp8qXGEuiBJ0l3IrOB2NzObApRA9I5ux4uQC31SrkzNwL6m7jA6ohKV5SQ%25vqCv%25yLRzAHYax75prH1KM1n8wvT3oiZUbXM4FGKuTg90hE6PDBSbSeWAtRtsd5%25QcUfCmfXGEvTVJ0lLOqOB2azEbApHYXI5usoIQC3UC1kzNGJum7j0hShKVBHM%25vq8cXyr%25kWfDpJJ0lCrnOIJRdAbQO%25nyI5ue5JQC3PgwkzN5z9m7jCeohKVzXh%25vq7XFyLRl36YaxHahrH18Bln8520R%256d9lo24MA4F0wOoZ1qggDu63FmZ3MkNulKlO1OsxACeqUx4Wg3yZ3&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>S-class Saloon Long</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqrWFqtyO67PobzIr3eWsrrCsdRRzwQZ6TfZbMw3SGtGyStsd2J%25cUfpMqXGEjymJ0lVYpOB2qBqbApRAXI5uxfJQC30h7kzNHTwm7j86ohKViKw%25vq4yjyLR5cyYaxCaWrH1zjRn8w7hnoiZKMIM4FvslTg9LUO6PDaGqSeW0mRtsdB%25ycJtTjqNwYYax4JOroYfV8nMrgOfoiZ7MEM4FzRVTg9izO6PD4cmSeWqietsdUvGcUfGMWXGE0JdJ0loYAOBi1aftkV3xb15I7fD12rbpldCCNZkFu6pFIT9ZxexrlrKE847dvE5jCFcpF&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>S-class Saloon</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqbSFqtyO67PobzIr3eWsrrCsdRRzwQZv9IZbMw3SGtlKStsd2HtcUfp80XGEubYJ0l36xOB2NS5bApj7bI5uVKDQC31MrkzNwTbm7jZ6vhKVFKE%25vq9UTyLRDGmYaxWbSrH1KJtn8wvOyoiZLbgM4Fa4MTg9HvZ6PD8LmSeWiXRtsd4YTcUfgrcXGEzymJ0l7IVOB2KQObApvdyI5uLfJQC3akOkzNHmdm7jQ71hKVP0W%25vqeIDyLRsYWYaxCXhrH1zHdn8w7QwoiZKq1M4FvyFTg9L6O6PDaSoSeWHthtsd8BQcUfiAWXGEWbSJ0lCrnOIJtR1q9ooiZeIQM6o2xgTSMsQ26PDL7mSeWvK%25tsdPvQcUfercXGE1nwJ0lB0lOB2A81bA4wHEcmqN1IwCr1vWwpnIu2fzzjFm93Su9Q6DF1s1n2nvligKfLlCVz9Xu9&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>EQB</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXq0W7qtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlKStsd2HtcUfp8qXGEuiBJ0l3IrOB2NzObApRA9I5ux4uQC31SrkzNwL6m7jA6ohKV5SQ%25vqCv%25yLRzAHYax75prH1KM1n8wvT3oiZUbXM4FGKuTg90hE6PDBSbSeWAtRtsd5%25QcUfCmfXGEvTVJ0lLOqOB2azEbApHYXI5usoIQC3UC1kzNGJum7j0hShKVBHM%25vq8cXyr%25kWfDpJJ0lCrnOIJRdAbQO%25nyI5ue5JQC3PgwkzN5z9m7jCeohKVzXh%25vq7XFyLRl36YaxHahrH18Bln8520R%256d9lo24MA4F0wOoZ1qggDu63FmZ3MkNulKlO1OsxACeqUx4Wg3yZ3&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>GLA</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/bbd/images/v1/4448/3/92/85982b548bb4c2e321f264d9359bd3bcd1f02.png?im=Crop,rect=(70,35,460,260);Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>GLB</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXq5JFqtyO67PobzIr3eWsrrCsdRRzwQZg9BZbMw3SGtGyStsd2sDcUfp8fXGEuiRJ0l3IhOB2NQObApjkoI5uVcZQC31C1kzNwtnm7jA7mhKV5XN%25vq4t9yLRgLFYaxPoqrH1eMqn8wsocoiZrb1M4FnKJTg95z36PDCLuSeWzQMtsd8htcUfiO1XGE4nXJ0lgorOB2PSFbApeIoI5usKxQC3UvWkzNp%25bm7jaSthymI9WFlccUfAyYXOcVD0JbXmYhOB2iMwbAp0kpI5uBmMQC3Af6kzNWLKm7jK7IhKVvsQ%25vqLrdyLRaOXYaxHNhrHAlGqhTWFEnlipEqXV1JnwxV449pTuZkwuoQ3pE7EJxJeRB5PVsRiD4u%25wu&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>GLC</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqNEFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGyStsd2JQcUfpOyXGEuTRJ0lV0VOB2qM%25bApUAbI5uG4zQC30h7kzNBtum7j86ZhKViYN%25vq4yTyLRhAmYaxU0ErH1GCfn8w0hyoiZBJZM4FvIMTg9LtV6PDa%25mSeWHnRtsd8B3cUfiA1XGEWnjJ0lCorOB2znobQOcxwRDMM4FsQkTSMp1P6tTUkpSeWawMtsdLYqcUfeOyXGE1FyJ0lBHtOB2A85bAp5ToI5uCfJQCPFi2J%25xVZkF7Dg2oA3MkNulKKqD%25WjcNWmtdDZGZMuMapgeLlHp7RKWONW&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>GLE</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaY7qtyO67PobzIr3eWsrrCsdRRzwQZ63pZbMw3SGtAmOtsd8hQcUfiANXGE5YrJbXSqxVFnn8wPbIoTnlR4M6oeIlTg9vvO6PKNCZnX2f3SNKL7sT9DkSW9wUUEVXqdYWqtyRV3H3k9kBF7v0wAFslUqoWq&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>GLE Coupe</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaW7qtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtlajtsd2J%25cUfpMqXGEu5YJ0lVYhOB2qrnbApRn3I5ux5IQC31SrkzNBzNm7jAyvhKV5pV%25vq4t9yLRgc6YaxPoqrH1eIDn8wYAxoiZreEM4FACMTg95vk6PDakbSeWHXUtsd8Y%25cUfiM0XGE4TwJ0lgOfOB2PzqbApe7bI5usKDQC32M1kzNLtnm7jaSthymI9WFlccUfAyYXOcVD0JbX5YVOB2igSbAp0k9I5uBmMQC3AX7kzNWzum7jK6ohKVvKQ%25vqLUdyLRaYmYaBEUVmMDZfrE81fzcExXr1RjiiF2MpwQ1pnIu2fzfXRXPq0Agjeq89iph1p&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  
+  <div class="item2">
+    <h1>GLS</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqrWFqtyO67PobzIr3eWsrrCsdRRzwQZ6TfZbMw3SGtGyStsd2J%25cUfpMqXGEjymJ0lVYpOB2qBqbApRAXI5uxfJQC30h7kzNHTwm7j86ohKViKw%25vq4yjyLR5cyYaxCaWrH1zjRn8w7hnoiZKMIM4FvslTg9LUO6PDaGqSeW0mRtsdB%25ycJtTjqNwYYax4JOroYfV8nMrgOfoiZ7MEM4FzRVTg9izO6PD4cmSeWqietsdUvGcUfGMWXGE0JdJ0loYAOBi1aftkV3xb15I7fD12rbpldCCNZkFu6pFIT9ZxexrlrKE847dvE5jCFcpF&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>G-Class off road</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqr8FqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtGyStsd2HVcUfpOyXGEuTRJ0l3OfOB2qrnbApRn3I5ux6YQC30MrkzNBlkm7jAhShKViSF%25vq4tTyLRgLFYaxPrSrH1yCtn8w0AxoiZB6EM4FAyrTg9LQT6PDaPpSeWHw9tsd8BQcUfiA1XGE5YrJbXSqxVFnn8wPbIoTnlR4M6oeIlTg9vtO6PDK1ASeWgKhtsdPHQcUfeOyXGE1FqJ0lBYrOB2A85bAp5k9I5uCQ2QCPFi2J%25xVZkF760yvx3MkNulKKqD%25WjcNWmtdDZGZMuMapgeLlHp7RKWONW&imgt=P27&bkgnd=9&pov=BE140,DZO&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>Mercedes-Maybach GLS</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqbELqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtlaWtsd3hQcUfNUkXGEPGXJ0leOrOB2KBjbApvkbI5uLQYQC3bgpkzNI%25nm7jgeFhKVPbQ%25vqAtkyLR5LDYaxCo8rH1zmrn8w7hwoiZK%25gM4FvslTg9LUV6PDZkbSeW0eUtsdB%25ycJtTjqNwYYax4JOroYfV8nMrgOfoiZ7qZM4FzRETg9igV6PD41DSeWqD2tsdUvTcUfGL0XGE0idJ0lBIZOB2AWFbAp5tRI5uCQ2QC3SMFkze94pOy1qFm9eUP0N9NTmj32vvRWydVXjdhcfWF0FT3THuPsa28uKxvdbjd&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>GLS</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZgk4ZbMw3SGtlKUtsd2HdcUfp8qXGEubmJ0l3IrOB2NS1bApj79I5uxoYQC30CQkzNB%25dm7jAhShKViSF%25vq4tTyLRgOFYaxPrSrH1en%25n8wso3oiZr51M4FACMTg95zp6PDCruSeWHmMtsd8s3cUfiOqXGE4bBJ0lg6AOB2PzqbApe79I5usK2QC32MrkzNptYm7jaSthymI9WFlccUfAyYXOcVD0JbX5YVOB2gBEbAp4PxI5uBo2QC3AE3kzN7Tnm7jK63hKVvKQ%25vqLUkyL0fsjko9wdYf0AGg%25qRcYxqN88Zlo21Ix2rbpldCdcqcgVGB4NPVHF82mx2&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+  <div class="item2">
+    <h1>Off road</h1>
+    <img src="https://assets.oneweb.mercedes-benz.com/iris/iris.png?COSY-EU-100-1713d0VXqbWFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGyStsdAv3cUf5rcXGE5YrJbXSqxVFnn8wPbIoTnlR4M6oeIlTg9BhZ6PDdhoSeWfSStsdEM3cUflTkXGE2ZXJ0lpFlOB2uy2bAp3YlI5uNz2QC3j7TkzN2z9m7jpcIhKVubW%25vq389yLRNX6YaxjvhrH1ViRn8wzIcoiZ65pM4FShlTg9tX26PDcwbSeW7tItsdLYxcUfe%25cXGEsbwJ0lUIfOB2GS5bAp0IXI5uBT2QC3AJOkzN5Enm7joGZhKVf8h%25vqEQkyLRlK2Yaxy5JrH1Yrtn8wyPfoiZ4kEM4FumjTg93m36PDNnmSeWjOStsdXvTcUaqKDTb32VXqo8V4x4f%25XEd9BBpxb1loE1JnwxV4V%25d%25CWLH59zW0uB16E1&imgt=P27&bkgnd=9&pov=BE140&uni=cs&im=Crop,rect=(0,0,1450,750),gravity=Center;Resize,width=300">
+  </div>
+ </div>
+ </div>
+ </div>
+
+
+
+ <div class="message">
+    <img src="https://cdn-icons-png.flaticon.com/512/685/685887.png">
+ </div>
+
+ </div>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="cont">
+  <div class="box1">
+    <div class="box-content">
+      <h3>Online Store</h3>
+      <p>Discover your new Mercedes.</p>
+    </div>
+    <div class="arrow"></div>
+  </div>
+  <div class="box1">
+    <div class="box-content">
+      <h3>Configurator</h3>
+      <p>Configure your vehicle now.</p>
+    </div>
+    <div class="arrow"></div>
+  </div>
+  <div class="box1">
+    <div class="box-content">
+      <h3>Nearest Showroom</h3>
+      <p>Find a Mercedes-Benz partner.</p>
+    </div>
+    <div class="arrow"></div>
+  </div>
+  <div class="box1">
+    <div class="box-content">
+      <h3>Finance &amp; Insurance</h3>
+      <p>Find your suitable financial product.</p>
+    </div>
+    <div class="arrow"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bgblack">
+    <div class="up">
+        <a href="#head1">
+
+            <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
+        </a>
+        <h3>Up</h3>
+    </div>
+    <div class="container">
+      <div class="footer-column">
+        
+        <h3>Buy Vehicle</h3>
+        <ul>
+          <li>Buy vehicle</li>
+          <li>Pre-owned Cars</li>
+          <li>Find a new car</li>
+          <li>Finance</li>
+          <li>Configure your car</li>
+          <li>All brochures</li>
+          <li>Model overview</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Purchase advice</h3>
+        <ul>
+          <li>Book a test drive</li>
+          <li>Nearest Showroom</li>
+          <li>Corporate and Fleet Solutions</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Customer services</h3>
+        <ul>
+          <li>Book a service appointment</li>
+          <li>Owner's Manuals</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Technology</h3>
+        <ul>
+          <li>Electric mobility</li>
+          <li>About Mercedes me</li>
+          <li>Connect services</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Popular models</h3>
+        <ul>
+          <li>Electric vehicles</li>
+          <li>Limousines</li>
+          <li>SUVs</li>
+          <li>Cabriolets &amp; Roadsters</li>
+          <li>MERCEDES-AMG</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>About us</h3>
+        <ul>
+          <li>Contact</li>
+          <li>Grievances Redressal Mechanism</li>
+          <li>Environment and Sustainability</li>
+          <li>Press Release</li>
+          <li>Careers</li>
+          <li>Mercedes-Benz Collection</li>
+          <li>Privacy</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container1">
+      <div class="footer-column">
+        <h3>MBFS</h3>
+        <ul>
+          <li>Fair Practice Code</li>
+          <li>Corporate Governance Policy</li>
+          <li>Ombudsman Scheme for NBFS</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>CSR Policy</h3>
+        <ul>
+          <li>CSR Policy</li>
+          <li>Composition of CSR Committee</li>
+          <li>Approved CSR Projects</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Annual Return</h3>
+        <ul>
+          <li>Extract of Annual Report</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Notice of 28th AGM</h3>
+        <ul>
+          <li>AGM Notice</li>
+        </ul>
+      </div>
+      
+    </div>
+      <div class="about">
+        <p>© 2023. Mercedes-Benz India Pvt. Ltd. All Rights Reserved (provider)</p>
+        <p>Cookies</p>
+        <p>Data protection</p>
+        <p>Legal notices</p>
+        <p>Caution - Fraudulent Job Offerings</p>
+        <p>MB Dialogue - T&amp;C</p>
+        <p>Contest T&amp;C</p>
+        
+        <div class="ico">
+
+            <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+        </div>
+      
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
