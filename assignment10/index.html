@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body id="body">
+
+    <button onclick="color()">Color</button>
+    
+    <script>
+        const hexColors = [
+  "#FF0000",
+  "#00FF00", 
+  "#0000FF", 
+  "#FFFF00", 
+  "#00FFFF", 
+  "#FF00FF"  
+];
+let count = 0
+        function color(){
+        
+            count=count+1;
+            if(count>6){
+                count=0;
+            }
+        
+            let body1 = document.getElementById("body")
+            body1.style.backgroundColor="#ffffff"
+            body1.style.backgroundColor=`${hexColors[count]}`;
+            
+        }
+    </script>
+</body>
+</html>
