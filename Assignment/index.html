@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Text Appender</title>
+    
+</head>
+<body>
+    <input type="text" id="text-input" placeholder="Enter text">
+    <button id="add-button" onclick="addText()">Add</button>
+    <div id="text-container"></div>
+
+    <script>
+        function addText() {
+            const textInput = document.getElementById('text-input');
+            const textContainer = document.getElementById('text-container');
+
+            const newText = textInput.value;
+            if (newText) {
+                const newPTag = document.createElement('p');
+                newPTag.textContent = newText;
+                textContainer.appendChild(newPTag);
+            }
+        }
+    </script>
+</body>
+</html>
