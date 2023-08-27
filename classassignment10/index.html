@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #root{
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+
+        }
+        #shape{
+            margin: 40%;
+            height: 50px;
+            width:50px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div id="shape">
+
+        </div>
+    </div>
+    <button onclick="color()">Color</button>
+    <button onclick="shape()">shape</button>
+    <script>
+        function shape(){
+            let shape = document.getElementById("shape");
+            if(shape.style.borderRadius!="50%"){
+                shape.style.borderRadius="50%";
+            }
+            else{
+                shape.style.borderRadius="0%";
+            }
+           
+
+        }
+
+        function color(){
+            let color1 = document.getElementById("root");
+            let shape = document.getElementById("shape");
+      
+            if(color1.style.backgroundColor=="rgb(0, 0, 0)"){
+                color1.style.backgroundColor="#ffffff";
+               shape.style.backgroundColor="#ffffff"
+
+            }
+            else{
+                color1.style.backgroundColor="#000000";
+                shape.style.backgroundColor="#ffffff"
+            }
+        }
+    </script>
+</body>
+</html>
