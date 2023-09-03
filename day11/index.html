@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403-03</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        #form_container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            appearance: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #tiplabel {
+            margin-top: 20px;
+        }
+
+        #totaltip {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="form_container">
+            <h1>Tip Calculator</h1>
+            <form id="tip_form">
+                <label>
+                    How much was your bill?<br>
+                    Rs. <input type="text" id="bill_amount"><br>
+                </label>
+                <label>
+                    How was your service?<br>
+                    <select id="service_quality">
+                        <option disabled="" selected="" value="0">-- Choose an option --</option>
+                        <option value="0.3">30% - Outstanding</option>
+                        <option value="0.2">20% - Good</option>
+                        <option value="0.15">15% - It was okay</option>
+                        <option value="0.1">10% - Bad</option>
+                        <option value="0.05">5%  - Terrible</option>
+                    </select>
+                </label>
+                <label>
+                    How many people are sharing the bill?<br>
+                    <input type="text" id="num_people"> people
+                </label>
+                <button type="button" id="calculate_button">Calculate!</button>
+                <label for="tip" style="text-align:center;width: 100%;" id="tip_label">
+                    Tip Amount<br>
+                    <input type="text" id="total_tip" style="text-align:center;">
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    
+        var tipLabel = document.getElementById("tip_label");
+        tipLabel.style.display = "none";
+
+        var calculateButton = document.getElementById("calculate_button");
+        calculateButton.addEventListener('click', () => {
+            var billAmount = document.getElementById("bill_amount").value;
+            var serviceQuality = document.getElementById("service_quality").value;
+            var numPeople = document.getElementById("num_people").value;
+            document.getElementById("total_tip").value = " RS " + (billAmount * serviceQuality) / numPeople + " !";
+            tipLabel.style.display = "inline";
+        });
+    </script>
+</body>
+</html>
