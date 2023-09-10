@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Search</title>
+   </head>
+<body>
+<h1>GitHub Profile Search</h1>
+    <input type="text" id="searchInput" placeholder="Enter GitHub Username">
+    <button onclick="searchProfile()">Search</button>
+    <div id="profileInfo"></div>
+
+    <script>
+        function searchProfile() {
+            const keyword = document.getElementById('searchInput').value;
+            const apiUrl = `https://api.github.com/users/${keyword}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === "Not Found") {
+                        document.getElementById('profileInfo').innerHTML = "User not found.";
+                    } else {
+                        const profileInfo = `
+                            <h2>${data.login}</h2>
+                            <img src="${data.avatar_url}" alt="${data.login}" width="100">
+                            <p>Name: ${data.name || 'N/A'}</p>
+                            <p>Location: ${data.location || 'N/A'}</p>
+                            <p>Followers: ${data.followers}</p>
+                            <p>Following: ${data.following}</p>
+                            <p>Public Repos: ${data.public_repos}</p>
+                            <p>Profile URL: <a href="${data.html_url}" target="_blank">${data.html_url}</a></p>
+                        `;
+                        document.getElementById('profileInfo').innerHTML = profileInfo;
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById('profileInfo').innerHTML = "An error occurred while fetching the user data.";
+                });
+        }
+    </script>
+</body>
+</html>
