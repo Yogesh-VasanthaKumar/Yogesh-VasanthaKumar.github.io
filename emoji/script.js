@@ -22808,5 +22808,5 @@ searchInput.addEventListener("input", e => {
     displaySearchResults(value);
 });
 
-// Initial display of all emojis
+
 displaySearchResults();
