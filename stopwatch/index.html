@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #stopwatch-card {
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #timer {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="stopwatch-card">
+        <div id="timer">00:00:00</div>
+        <div id="buttons">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let startTime = 0;
+        let intervalId = null;
+
+        const timerElement = document.getElementById('timer');
+        const startButton = document.getElementById('start');
+        const stopButton = document.getElementById('stop');
+        const resetButton = document.getElementById('reset');
+
+        function updateTimer() {
+            const currentTime = Math.floor((Date.now() - startTime) / 1000);
+            const hours = Math.floor(currentTime / 3600);
+            const minutes = Math.floor((currentTime % 3600) / 60);
+            const seconds = currentTime % 60;
+            timerElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function resetTimer() {
+            timerElement.textContent = '000';
+        }
+
+        startButton.addEventListener('click', () => {
+            if (!intervalId) {
+                startTime = Date.now() - (startTime ? (Date.now() - startTime) : 0);
+                intervalId = setInterval(updateTimer, 1000);
+            }
+        });
+
+        stopButton.addEventListener('click', () => {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+        });
+
+        resetButton.addEventListener('click', () => {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+            startTime = 0;
+            resetTimer();
+        });
+    </script>
+</body>
+</html>
