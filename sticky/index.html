@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+.writer-header {
+    background-color: #f2f2f2;
+}
+
+.writer-content {
+    max-width: 750px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.note-entry {
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.note-text {
+    height: 100px;
+    width: 500px;
+    padding: 10px;
+    box-shadow: 5px 5px #394356;
+    background-color: #ffffff;
+    border-radius: 6px;
+}
+
+.note-btn {
+    background-color: #394356;
+    color: #ffffff;
+    box-shadow: 5px 5px #d1d1e0;
+}
+
+.note-btn:focus {
+    color: #ffffff;
+}
+
+.note-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-color {
+    width: 90px;
+    height: 35px;
+}
+
+.writer-notes-list {
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.writer-note {
+    padding: 15px;
+    border-radius: 5px;
+    width: 260px;
+    box-shadow: 4px 4px #f2f2f2;
+    margin: 10px;
+    height: 160px;
+    border-top: solid 5px #4d4d4d;
+}
+
+.note-view {
+    height: 100px;
+    overflow-y: scroll;
+    scrollbar-width: 6px;
+    scrollbar-color: #f2f2f2f2;
+}
+
+.note-view::-webkit-scrollbar {
+    display: none;
+}
+
+.no-writer-notes {
+    display: flex;
+    flex-direction: row;
+}
+
+.no-writer-msg {
+    margin-top: 100px;
+    text-align: center;
+    opacity: 70;
+}
+
+.writer-footer {
+    height: 40px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 300px;
+}
+
+</style>
+    <title>Writer Notes</title>
+</head>
+<body>
+    <div class="writer-header">
+        <div class="writer-content">
+            <div class="note-entry">
+                <textarea class="note-text" rows="3" placeholder="Write a note here"></textarea>
+                <div class="note-actions">
+                    <input type="color" value="#ccffcc" class="note-color">
+                    <button class="note-btn" id="add-note-btn">Add note</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="writer-notes-list">
+        <div class="no-writer-notes">
+            <h4 class="no-writer-msg">You haven't added any notes yet.</h4>
+        </div>
+    </div>
+
+    <script >
+      const noteInput = document.querySelector('.note-text');
+const addNoteButton = document.querySelector('#add-note-btn');
+addNoteButton.addEventListener("click", addNewNote);
+const allWriterNotes = [];
+
+const noteColorInput = document.querySelector('.note-color');
+const writerNotesList = document.querySelector('.writer-notes-list');
+
+document.addEventListener('keypress', (event) => {
+    if (event.keyCode === 13) {
+        addNewNote();
+    }
+});
+
+function addNewNote() {
+    if (noteInput.value) {
+        let newWriterNote = {
+            noteContent: noteInput.value,
+            noteColor: noteColorInput.value
+        };
+        allWriterNotes.push(newWriterNote);
+    } else {
+        alert("A note can't be empty.");
+    }
+
+    noteInput.value = "";
+    noteInput.focus();
+    displayWriterNotes(allWriterNotes);
+}
+
+function displayWriterNotes(notes) {
+    writerNotesList.innerHTML = "";
+    notes.forEach(element => {
+        let noteHTML = `
+        <div class="writer-note" style="background-color:${element.noteColor};">
+            <div class="note-view">
+                ${element.noteContent}
+            </div>
+            <div>
+                <a class="deleteNoteBtn">Del</a>
+            </div>
+        </div>
+        `;
+
+        writerNotesList.insertAdjacentHTML('afterbegin', noteHTML);
+    });
+
+    const deleteNoteBtns = document.querySelectorAll('.deleteNoteBtn');
+    deleteNoteBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => { deleteWriterNote(index); });
+    });
+}
+
+function deleteWriterNote(index) {
+    allWriterNotes.splice(index, 1);
+    displayWriterNotes(allWriterNotes);
+}
+
+    </script>
+</body>
+</html>
