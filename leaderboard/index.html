@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaderBoard</title>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    width: 80%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+button {
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border: 2px solid #000;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    display: none;
+    margin: 10px 0;
+}
+
+.scoreboard {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #fff;
+    gap: 10px;
+}
+
+.player p {
+    margin: 0;
+}
+
+.player button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>LeaderBoard</h1>
+        <form id="leaderboard-form">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Country">
+            <input type="number" placeholder="Player Score">
+            <button type="submit">Add Player</button>
+        </form>
+        <p class="error-message" style="display: none;">All fields are required</p>
+
+        <div class="scoreboard"></div>
+    </main>
+
+    <script>
+        document.getElementById("leaderboard-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const inputs = event.target.querySelectorAll("input");
+            const firstName = inputs[0].value;
+            const lastName = inputs[1].value;
+            const country = inputs[2].value;
+            const score = parseInt(inputs[3].value);
+
+            if (!firstName || !lastName || !country || isNaN(score)) {
+                document.querySelector(".error-message").style.display = "block";
+                return;
+            }
+
+            document.querySelector(".error-message").style.display = "none";
+
+            const playerElement = document.createElement("div");
+            playerElement.className = "player";
+            playerElement.innerHTML = `
+                <p>${firstName} ${lastName}</p>
+                <p>${country}</p>
+                <p>${score}</p>
+                <button>Delete</button>
+                <button>+5</button>
+                <button>-5</button>
+            `;
+
+            const scoreboard = document.querySelector(".scoreboard");
+            scoreboard.appendChild(playerElement);
+
+            inputs.forEach(input => input.value = ""); // Clear the input fields
+        });
+
+        document.querySelector(".scoreboard").addEventListener("click", function (event) {
+            if (event.target.tagName === "BUTTON" && event.target.textContent === "Delete") {
+                event.target.parentElement.remove();
+            }
+        });
+    </script>
+</body>
+</html>
