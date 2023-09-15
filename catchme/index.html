@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catch Me</title>
+    <style>body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.game-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: absolute;
+    transition: top 0.5s, left 0.5s;
+}
+
+.game-box p {
+    text-align: center;
+    line-height: 100px;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+}
+</style>
+</head>
+<body>
+    <div class="game-box">
+        <p>Catch Me</p>
+    </div>
+    <script >var gameBox = document.querySelector('.game-box');
+
+gameBox.addEventListener("mouseover", function(event) {
+    var newPosition = getNewPosition();
+    gameBox.style.top = newPosition.y + "px";
+    gameBox.style.left = newPosition.x + "px";
+});
+
+function getNewPosition() {
+    var newX = Math.floor(Math.random() * (window.innerWidth - 100));
+    var newY = Math.floor(Math.random() * (window.innerHeight - 100));
+    
+    return { x: newX, y: newY };
+}
+</script>
+</body>
+</html>
