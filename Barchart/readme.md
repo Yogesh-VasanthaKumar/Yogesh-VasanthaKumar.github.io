@@ -4,7 +4,7 @@ A simple web-based interactive bar chart created using Chart.js and animated wit
 
 ## Demo
 
-You can view a live demo of the interactive bar chart [here](link-to-demo).
+You can view a live demo of the interactive bar chart [link-to-demo](https://yogesh-vasanthakumar.github.io/Barchart/index.html).
 
 ## Features
 
