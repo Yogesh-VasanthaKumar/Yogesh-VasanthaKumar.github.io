@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <div id="popup" style="display: none;">
+        <div id="popup-content"></div>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <div id="registration">
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="regName">Name:</label>
+                <input type="text" id="regName" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="regEmail">Email:</label>
+                <input type="email" id="regEmail" name="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" name="password" placeholder="Enter your password">
+            </div>
+            <button type="button" onclick="register()">Register</button>
+        </form>
+    </div>
+
+    <div id="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="password" placeholder="Enter your password">
+            </div>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <div id="forgotPassword">
+        <h2>Forgot Password</h2>
+        <form id="forgotPasswordForm">
+            <div class="form-group">
+                <label for="forgotEmail">Email:</label>
+                <input type="email" id="forgotEmail" name="email" placeholder="Enter your email">
+            </div>
+            <button type="button" onclick="sendForgotPasswordEmail()">Send Reset Email</button>
+        </form>
+    </div>
+
+    <div id="resetPassword">
+        <h2>Reset Password</h2>
+        <form id="resetPasswordForm">
+            <div class="form-group">
+                <label for="resetEmail">Email:</label>
+                <input type="email" id="resetEmail" name="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="resetOTP">OTP:</label>
+                <input type="text" id="resetOTP" name="otp" placeholder="Enter OTP">
+            </div>
+            <div class="form-group">
+                <label for="resetNewPassword">New Password:</label>
+                <input type="password" id="resetNewPassword" name="newPassword" placeholder="Enter new password">
+            </div>
+            <button type="button" onclick="resetPassword()">Reset Password</button>
+        </form>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
