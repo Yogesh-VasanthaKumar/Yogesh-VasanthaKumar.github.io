@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <canvas id="barChart" width="400" height="200"></canvas>
+    </div>
+
+    <script>
+    
+        const barChartData = {
+            labels: ["Category A", "Category B", "Category C", "Category D", "Category E"],
+            datasets: [{
+                label: "Data",
+                data: [25, 42, 30, 15, 55],
+                backgroundColor: [
+                    'rgba(0, 0, 0, 0.5)',
+                   
+                ],
+                borderWidth: 1
+            }]
+        };
+
+    
+        const barChartCtx = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(barChartCtx, {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        anime({
+            targets: 'canvas',
+            translateY: [200, 0],
+            opacity: [0, 1],
+            easing: 'easeOutExpo',
+            duration: 2000
+        });
+    </script>
+</body>
+</html>
