@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Text-to-Speech Reader</h1>
+    </header>
+    <button id="toggle" class="custom-button">Toggle Text Box</button>
+    <div id="text-box" class="custom-box">
+        <div id="close" class="custom-close"><i class="fas fa-times"></i></div>
+        <h2>Select a Voice</h2>
+        <select id="voices" class="custom-select"></select>
+        <textarea id="text" class="custom-textarea" placeholder="Enter text to read..."></textarea>
+        <button class="custom-button" id="read">Read Text</button>
+    </div>
+    <main></main>
+    <script src="script.js"></script>
+</body>
+</html>
